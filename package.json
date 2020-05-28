@@ -1,0 +1,36 @@
+{
+	"name": "redcap-ddg",
+	"description": "REDCap Data Dictionary Generator: to generate data dictionary from a specification file",
+	"version": "0.1.0",
+	"author": "hts",
+	"main": "./src/main/main.js",
+	"scripts": {
+		"prebundle": "del-cli ./bundle/*",
+		"bundle": "parcel build ./src/renderer/index.html --out-dir ./bundle/ --public-url ./ --target electron",
+		"estart": "electron ./src/main/main.js",
+		"build": "electron-builder --config electron.json",
+		"scwastartup": "node scwastartup.js",
+		"scwacleanup": "node scwacleanup.js",
+		"devmr": "npm run prebundle && npm run bundle && npm run estart",
+		"devm": "npm run estart",
+		"prod": "npm run scwastartup && npm run prebundle && npm run bundle && npm run build && npm run scwacleanup"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.13.0",
+		"bootstrap": "^4.5.0",
+		"electron-store": "^5.1.1",
+		"jquery": "^3.5.1",
+		"moment": "^2.26.0",
+		"popper.js": "^1.16.1",
+		"v8-compile-cache": "^2.1.0",
+		"xlsx": "^0.16.0"
+	},
+	"devDependencies": {
+		"del-cli": "^3.0.1",
+		"electron": "^9.0.0",
+		"electron-builder": "^22.6.1",
+		"eslint": "^7.1.0",
+		"parcel": "^1.12.4",
+		"sass": "^1.26.5"
+	}
+}

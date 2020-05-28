@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>REDCap Data Dictionary Generator</title>
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+		<script src="./controller/renderer.js"></script>
+	</head>
+	<body class="container">
+		<h1>REDCap Data Dictionary Generator</h1>
+		<form>
+			<label for="input-path">Specification File (.xlsm, .xlsx) <small class="text-muted">Drag and drop supported</small></label>
+			<div class="input-group mb-3">
+				<div class="custom-file">
+					<input type="text" class="custom-file-input" id="input-path">
+					<label class="custom-file-label" for="input-path" title="ABC">Choose file</label>
+				</div>
+			</div>
+			
+			<label for="input-path">Destination Folder</label>
+			<div class="input-group mb-3">
+				<div class="custom-file">
+						<input type="text" class="custom-file-input" id="output-dir-path">
+						<label class="custom-file-label" for="output-dir-path">Choose directory</label>
+				</div>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="folder-btn">
+						<i class="far fa-folder-open fa-fw"></i>
+					</button>
+				</div>
+			</div>
+
+			<label for="suffix-select">Filename Suffix</label>
+			<div class="mb-3">
+				<select id="suffix-select" class="form-control">
+					<option selected>Auto date</option>
+					<option>Custom</option>
+				</select>
+			</div>
+			<div class="mb-3">
+				<input type="text" id="suffix" class="form-control" placeholder="Enter file suffix here..."></input>
+			</div>
+			<div class="mb-3">
+				<div class="custom-control custom-switch">
+					<input type="checkbox" class="custom-control-input" id="settings">
+					<label class="custom-control-label" for="settings">Save settings</label>
+				</div>
+			</div>
+			<div class="mb-3">
+				<button type="button" id="generate" class="btn btn-success">Generate</button>
+			</div>
+		</form>
+
+		<div class="modal" id="msg-modal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p id="output-msg"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="loading-board fa-2x" id="loading">
+			<i class="fas fa-cog fa-spin fa-fw loading"></i>
+		</div>
+	</body>
+</html>
