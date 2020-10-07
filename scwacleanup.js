@@ -22,4 +22,4 @@ if(fs.existsSync(backup)) {
 	fs.unlinkSync(backup);
 }
 
-console.log('Workaround: electron builder files have been stored from the modification for splash image');
+console.log('Workaround: electron builder original files have been restored.');

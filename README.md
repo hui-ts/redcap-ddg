@@ -9,7 +9,7 @@
 ### Usage
 * Configure the eCRF specification data in eCRF spec template.xlsm, which should be used with "Enable Content"
 * Use REDCap DDG.exe to generate the data dictionary according to the specification file
-* Import the generated data dictionary in REDCap to configure the instrument
+* Import the generated data dictionary in REDCap to configure the instruments
 
 ## Developer
 ### Project structure
@@ -22,7 +22,7 @@
 │       └── index.html   <--- parcel entry point  
 │       └── ...  
 ├── bundle/   <--- bundle built here by parcel  
-│   └── index.html   <--- the view that electron   actually calls  
+│   └── index.html   <--- the view that electron actually calls  
 │   └── ...  
 ├── dist/   <--- electron build output  
 ├── spec/
@@ -31,6 +31,6 @@
 ```
 
 ### NPM script
-devm: reload **m**ain  
-devmr: reload **m**ain and **r**enderer  
-prod: electron build with workaround for splash screen
+* devm: reload **m**ain  
+* devmr: reload **m**ain and **r**enderer  
+* prod: electron build with workaround for splash screen

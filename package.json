@@ -1,7 +1,7 @@
 {
 	"name": "redcap-ddg",
 	"description": "REDCap Data Dictionary Generator: to generate data dictionary from a specification file",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "hts",
 	"main": "./src/main/main.js",
 	"scripts": {
@@ -16,21 +16,21 @@
 		"prod": "npm run scwastartup && npm run prebundle && npm run bundle && npm run build && npm run scwacleanup"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-free": "^5.13.0",
-		"bootstrap": "^4.5.0",
-		"electron-store": "^5.1.1",
+		"@fortawesome/fontawesome-free": "^5.15.1",
+		"bootstrap": "^4.5.2",
+		"electron-store": "^5.2.0",
 		"jquery": "^3.5.1",
-		"moment": "^2.26.0",
+		"moment": "^2.29.1",
 		"popper.js": "^1.16.1",
-		"v8-compile-cache": "^2.1.0",
-		"xlsx": "^0.16.0"
+		"v8-compile-cache": "^2.1.1",
+		"xlsx": "^0.16.8"
 	},
 	"devDependencies": {
 		"del-cli": "^3.0.1",
-		"electron": "^9.0.0",
-		"electron-builder": "^22.6.1",
-		"eslint": "^7.1.0",
+		"electron": "^10.1.3",
+		"electron-builder": "^22.8.1",
+		"eslint": "^7.10.0",
 		"parcel": "^1.12.4",
-		"sass": "^1.26.5"
+		"sass": "^1.26.12"
 	}
 }
